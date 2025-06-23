@@ -1,0 +1,312 @@
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('files/fond.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 3px solid #667eea;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Sections de code */
+.code-section {
+    margin: 30px 0;
+    padding: 25px;
+    background: #f8f9fa;
+    border-left: 5px solid #667eea;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.code-title {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.code-block {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    overflow-x: auto;
+    margin: 15px 0;
+    border: 1px solid #4a5568;
+}
+
+.justification {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid #2196f3;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.tech-detail {
+    background: #f1f8e9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 3px solid #4caf50;
+    font-style: italic;
+}
+
+/* Image d'illustration */
+.illustration {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 15px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+@keyframes movePattern {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.illustration-text {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Section d'évaluation */
+.evaluation-note {
+    background: #fff3e0;
+    border: 2px solid #f57c00;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.evaluation-note h3 {
+    color: #f57c00;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.criteria-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #f57c00;
+    text-align: left;
+}
+
+.criteria-item strong {
+    color: #f57c00;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 2px solid #eee;
+    color: #666;
+}
+
+/* Éléments de mise en forme */
+.highlight {
+    background: #fff59d;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+
+/* Code 1: Media query pour écrans mobiles */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .code-block {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+    
+    .criteria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Code 2: Media query pour tablettes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        padding: 25px;
+    }
+    
+    .code-section {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .criteria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Code 3: Media query pour grands écrans */
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .code-section {
+        padding: 30px;
+        margin: 40px 0;
+    }
+    
+    .illustration {
+        max-width: 600px;
+        height: 350px;
+    }
+    
+    .criteria-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Code 4: Media query pour orientation paysage sur mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .container {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .illustration {
+        height: 200px;
+        margin: 20px auto;
+    }
+    
+    .code-section {
+        margin: 20px 0;
+        padding: 15px;
+    }
+    
+    .evaluation-note {
+        margin: 20px 0;
+        padding: 15px;
+    }
+}
+
+/* Styles d'impression pour PDF */
+@media print {
+    body {
+        background: white !important;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    .container {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+    
+    .code-block {
+        border: 1px solid #333 !important;
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        break-inside: avoid;
+    }
+    
+    .code-section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .illustration {
+        break-inside: avoid;
+    }
+    
+    .evaluation-note {
+        break-inside: avoid;
+    }
+}
